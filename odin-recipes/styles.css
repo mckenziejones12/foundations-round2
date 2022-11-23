@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+  margin: auto;
+  background-color: lightpink;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.berry {
+  background-color: blueviolet;
+}
+
+ul,
+ol,
+li {
+  list-style-position: inside;
+  margin: 0px;
+  padding: 0px;
+}
+
+.ingredient,
+.recipe {
+  list-style-type: none;
+}
+.recipe {
+  font-size: 24px;
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+h1 {
+  font-family: cursive;
+}
+h5 {
+  background-color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+.backBtn {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+}
