@@ -18,7 +18,6 @@ body {
   flex-direction: column;
   max-width: 1000px;
   margin: auto;
-  margin-top: 20px;
   color: whitesmoke;
 }
 .header {
@@ -73,7 +72,7 @@ a {
 .section1Content {
   display: flex;
   max-width: 1000px;
-  margin: auto;
+  margin: 24px 24px 42px 24px;
   padding: 30px;
 }
 .title {
@@ -107,6 +106,7 @@ a {
 .section2Img {
   width: 200px;
   height: 200px;
+  border-radius: 5%;
 }
 .two {
   margin: auto;
@@ -130,4 +130,62 @@ p {
   font-size: 20px;
   font-weight: 500;
   color: lightslategray;
+}
+.three {
+  background-color: pink;
+}
+.section3Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 800px;
+  padding: 50px;
+  gap: 20px;
+}
+.quote {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  color: whitesmoke;
+}
+.author {
+  margin-left: auto;
+  font-size: 20px;
+  font-weight: 600;
+  color: palevioletred;
+}
+
+.four {
+  margin: 70px 50px 70px 50px;
+}
+
+.section4Content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: palevioletred;
+  padding: 20px;
+  width: 800px;
+  margin: auto;
+  border: 5px solid pink;
+  border-radius: 7%;
+}
+.section4subsection {
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  color: whitesmoke;
+  font-size: 18px;
+  gap: 30px;
+}
+.subBtn {
+  background-color: pink;
+  color: palevioletred;
+  border: 2px solid whitesmoke;
+  font-size: 16px;
+  min-width: 150px;
+  padding: 0px;
+  border-radius: 10%;
 }
