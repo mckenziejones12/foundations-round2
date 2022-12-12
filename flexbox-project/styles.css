@@ -189,3 +189,36 @@ p {
   padding: 0px;
   border-radius: 10%;
 }
+
+.galleryHeader {
+  font-family: cursive;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 600;
+  padding: 40px 40px 0px 40px;
+  color: whitesmoke;
+}
+
+.galleryImg {
+  height: 300px;
+  width: 300px;
+  border-radius: 5%;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 50px;
+  margin: auto;
+}
+.gallery {
+  background-color: rgb(235, 184, 192);
+}
+.galleryFooter {
+  font-family: cursive;
+  font-size: 20px;
+  color: whitesmoke;
+  text-align: center;
+  padding: 40px;
+}
