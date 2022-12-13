@@ -1,5 +1,6 @@
 body,
-.aboutPage {
+.aboutPage,
+.orderPage {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -255,4 +256,28 @@ p {
 .aboutContent {
   text-indent: 30px;
   font-size: 20px;
+}
+.orderContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
+  max-width: 400px;
+  margin: auto;
+}
+.orderPage {
+  background-color: palevioletred;
+}
+.orderInstructions {
+  font-size: 24px;
+  color: lightslategrey;
+  text-align: center;
+  padding: 40px;
+}
+.orderEmail {
+  font-size: 32px;
+  font-family: cursive;
+  color: palevioletred;
+  padding-bottom: 40px;
 }
