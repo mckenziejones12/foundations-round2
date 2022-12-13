@@ -1,4 +1,5 @@
-body {
+body,
+.aboutPage {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -215,10 +216,43 @@ p {
 .gallery {
   background-color: rgb(235, 184, 192);
 }
-.galleryFooter {
+.galleryFooter,
+.aboutFooter {
   font-family: cursive;
   font-size: 20px;
   color: whitesmoke;
   text-align: center;
   padding: 40px;
+}
+.bakerImg {
+  height: 400px;
+  width: 325px;
+  border: 5px solid palevioletred;
+  margin: auto;
+}
+.aboutPage {
+  background-color: pink;
+  padding: 50px 50px 0px 50px;
+}
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  color: lightslategrey;
+  margin: auto;
+  padding: 40px;
+}
+
+.aboutHeader {
+  color: palevioletred;
+  font-weight: 600;
+  font-family: cursive;
+  font-size: 42px;
+  padding: 20px;
+}
+.aboutContent {
+  text-indent: 30px;
+  font-size: 20px;
 }
