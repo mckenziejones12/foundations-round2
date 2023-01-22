@@ -7,29 +7,28 @@ function getComputerChoice() {
 }
 
 // participant variables
-const USER = "Player wins!";
+const PLAYER = "Player wins!";
 const COMPUTER = "Computer wins!";
 const TIE = "Tie!";
 
-// play interactive round with player and computer
 function playRound(player, computer) {
   if (player === "rock" && computer === "paper") {
     return COMPUTER;
   }
   if (player === "rock" && computer === "scissors") {
-    return USER;
+    return PLAYER;
   }
   if (player === "paper" && computer === "scissors") {
     return COMPUTER;
   }
   if (player === "paper" && computer === "rock") {
-    return USER;
+    return PLAYER;
   }
   if (player === "scissors" && computer === "rock") {
     return COMPUTER;
   }
   if (player === "scissors" && computer === "paper") {
-    return USER;
+    return PLAYER;
   }
   return TIE;
 }
@@ -37,44 +36,87 @@ function playRound(player, computer) {
 // score tracker variables
 let playerScore = 0;
 let computerScore = 0;
-
-function game() {
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt("Rock, Paper, or Scissors?");
-    const lowerCasePlayerSelection = playerSelection.toLowerCase();
-    const computerSelection = getComputerChoice();
-    const winner = playRound(lowerCasePlayerSelection, computerSelection);
-
-    console.log("Player Selection: ", lowerCasePlayerSelection);
-    console.log("Computer Selection: ", computerSelection);
-    console.log("Winner: ", winner);
-    // make a new line
-    console.log("\n");
-
-    updateScore(winner);
-  }
-}
-
-// a function that determines final winner of game
-function whoWon(playerWins, computerWins) {
-  if (playerWins > computerWins) {
-    return "Congrats! You win!";
-  }
-  return "Sorry, you lose. Better luck next time!";
-}
+let play = 0;
 
 function updateScore(roundWinner) {
-  if (roundWinner === USER) {
+  play++;
+  const gameWinner = document.querySelector("#gameWinner");
+  const userScore = document.querySelector("#userScore");
+  const compScore = document.querySelector("#compScore");
+
+  if (play >= 5) {
+    if (playerScore > computerScore) {
+      gameWinner.textContent = "You win!";
+    } else if (computerScore > playerScore) {
+      gameWinner.textContent = "Sorry, computer wins! Better luck next time!";
+    } else {
+      gameWinner.textContent = "You tie!";
+    }
+    return;
+  }
+
+  if (roundWinner === PLAYER) {
     playerScore++;
   }
   if (roundWinner === COMPUTER) {
     computerScore++;
   }
+  userScore.textContent = `Player score: ${playerScore}`;
+  compScore.textContent = `Computer score: ${computerScore}`;
 }
 
-// Play the game
-game();
+//UI additions using DOM
+//create 3 buttons in body
+const body = document.querySelector("body");
 
-const finalWinner = whoWon(playerScore, computerScore);
+const btn1 = document.createElement("button");
+btn1.textContent = "rock";
 
-console.log(finalWinner);
+const btn2 = document.createElement("button");
+btn2.textContent = "paper";
+
+const btn3 = document.createElement("button");
+btn3.textContent = "scissors";
+
+//create scoreboard
+const userScore = document.createElement("h4");
+userScore.id = "userScore";
+userScore.textContent = "Player score: 0";
+
+const compScore = document.createElement("h4");
+compScore.id = "compScore";
+compScore.textContent = "Computer score: 0";
+
+const gameWinner = document.createElement("h1");
+gameWinner.id = "gameWinner";
+gameWinner.textContent = "";
+
+//create event listeners for btns
+btn1.addEventListener("click", function (e) {
+  const playerSelection = e.target.innerText;
+  const compSelection = getComputerChoice();
+  const singleRoundWinner = playRound(playerSelection, compSelection);
+  updateScore(singleRoundWinner);
+});
+
+btn2.addEventListener("click", function (e) {
+  const playerSelection = e.target.innterText;
+  const compSelection = getComputerChoice();
+  const singleRoundWinner = playRound(playerSelection, compSelection);
+  updateScore(singleRoundWinner);
+});
+
+btn3.addEventListener("click", function (e) {
+  const playerSelection = e.target.innterText;
+  const compSelection = getComputerChoice();
+  const singleRoundWinner = playRound(playerSelection, compSelection);
+  updateScore(singleRoundWinner);
+});
+
+//append changes
+body.appendChild(btn1);
+body.appendChild(btn2);
+body.appendChild(btn3);
+body.appendChild(userScore);
+body.appendChild(compScore);
+body.appendChild(gameWinner);
