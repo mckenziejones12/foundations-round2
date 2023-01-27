@@ -1,0 +1,13 @@
+#easGrid {
+  display: grid;
+  height: 600px;
+  width: 600px;
+  background-color: black;
+  gap: 2px;
+  border: 2px solid black;
+  margin: auto;
+}
+
+.cell {
+  background-color: white;
+}
