@@ -1,10 +1,17 @@
 body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    rgb(178, 221, 223),
+    rgb(255, 255, 255),
+    rgba(89, 201, 221, 0.507)
+  );
 }
 .calculator {
   min-width: 400px;
   max-width: 400px;
   min-height: auto;
   border: 3px solid black;
+  border-radius: 8%;
   background-color: lightslategray;
   margin: auto;
   margin-top: 50px;
@@ -15,6 +22,7 @@ body {
   margin: 20px;
   background-color: whitesmoke;
   border: 2px solid black;
+  border-radius: 4%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,11 +30,11 @@ body {
   font-size: 24px;
   font-family: cursive;
 }
-.operationSection,
-.answerSection {
+#operationSection,
+#resultSection {
   padding: 10px;
 }
-.answerSection {
+#resultSection {
   font-size: 32px;
 }
 .calcBtns {
@@ -35,18 +43,12 @@ body {
   margin: 0px 20px 20px 20px;
 }
 .smallBtns {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-evenly; */
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px;
   padding-bottom: 10px;
 }
 .bigBtns {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
@@ -54,14 +56,23 @@ body {
 button {
   text-align: center;
   padding: 10px;
-  background-color: rgb(219, 238, 232);
+  background-color: rgb(238, 240, 239);
   font-family: cursive;
   font-size: 20px;
   font-weight: 700;
   border: 2px solid black;
+  border-radius: 5%;
 }
 #clearBtn,
 #equalBtn {
-  background-color: rgba(167, 223, 224, 0.815);
   font-size: 24px;
+}
+#equalBtn {
+  background-color: rgba(167, 223, 224, 0.815);
+  color: aliceblue;
+  padding: 0px;
+  font-size: 36px;
+}
+#clearBtn {
+  background-color: rgba(220, 220, 220, 0.808);
 }

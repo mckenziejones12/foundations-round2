@@ -6,37 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Basic Calculator</title>
 </head>
 
 <body>
     <div class="calculator">
         <div class="calcScreen">
-            <div class="operationSection"></div>
-            <div class="answerSection"></div>
+            <div id="operationSection"></div>
+            <div id="resultSection"></div>
         </div>
         <div class="calcBtns">
             <div class="smallBtns">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>+</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>x</button>
-                <button>+/-</button>
-                <button>0</button>
-                <button>.</button>
-                <button>/</button>
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>
+                <button data-operator>+</button>
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>
+                <button data-operator>-</button>
+                <button data-number>1</button>
+                <button data-number>2</button>
+                <button data-number>3</button>
+                <button data-operator>&times;</button>
+                <button id="negative">+/-</button>
+                <button data-number>0</button>
+                <button id="decimal">.</button>
+                <button data-operator>&divide;</button>
             </div>
             <div class="bigBtns">
-                <button>AC</button>
-                <button>=</button>
+                <button id="clearBtn">AC</button>
+                <button id="equalBtn">=</button>
             </div>
         </div>
     </div>
