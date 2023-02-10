@@ -96,4 +96,5 @@ function clear() {
   previousOperand = "";
   currentOperator = "";
   result = "";
+  currentOperand = "";
 }
